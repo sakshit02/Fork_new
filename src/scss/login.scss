@@ -1,0 +1,242 @@
+/* Container for login page */
+
+.login-container {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper to contain login elements */
+.login-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Row that holds both image and form sections */
+.login-row {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  background-color: white;
+}
+
+/* Image Section */
+.image-section {
+  display: none;
+  background-color: #ececec;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Image display settings for larger screens */
+@media (min-width: 768px) {
+  .image-section {
+    display: flex;
+    width: 60%;
+  }
+}
+
+/* Styling for image in the left section */
+.image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Form Section */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  width: 100%;
+}
+
+/* For larger screens, adjust the form section width */
+@media (min-width: 768px) {
+  .form-section {
+    width: 40%;
+  }
+}
+
+/* Content wrapper for the form */
+.form-content {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Brand title styling */
+.brand-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #0e5020;
+}
+
+/* Card wrapper for form */
+.form-card {
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  padding: 20px;
+}
+
+/* Form title */
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* Form subtitle (e.g., Admin login link) */
+.form-subtitle {
+  font-size: 14px;
+  color: #9e9c9c;
+  margin-bottom: 40px;
+}
+
+/* Store login link styling */
+.store-login-link {
+  color: #0e5020;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Primary login button */
+.login-button {
+  background-color: #039d55;
+  color: white;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #0a5024;
+    color: whitesmoke;
+  }
+}
+
+/* Secondary login buttons with lighter design */
+.login-buttons {
+  background-color: white;
+  color: gray;
+  border: 1px solid rgb(109, 201, 138);
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Added transition for smooth effect */
+  
+  &:hover {
+    border: 1px solid rgb(215, 220, 217);
+    color: rgb(76, 157, 168);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Added shadow effect */
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 5px !important;
+  position: relative;
+  width: 100%;
+  color: #8c98a4;
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #dcdcdc;
+  margin: 0 10px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  /* Always visible label */
+  .input-label {
+    position: absolute;
+    top: -10px; /* Adjusted to stay above input */
+    left: 15px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 0.9rem;
+    color: #0E5020;
+    font-weight: 500;
+    z-index: 1;
+    pointer-events: none; /* Prevents label interaction */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+
+  /* Input Group Overlap */
+  .input-group-overlap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .input-group-text {
+      position: absolute;
+      left: 10px;
+      background-color: transparent;
+      color: #6c757d;
+      z-index: 2;
+    }
+
+    input {
+      border: 2px solid #ccc; /* Default border */
+      border-radius: 15px;
+      padding: 10px 12px;
+      padding-left: 40px; /* Space for icon */
+      box-shadow: none;
+      outline: none;
+
+      &:focus {
+        border-color: #0a5024; /* Green border on focus */
+      }
+    }
+  }
+}
+
+
+
+
+// Target the CIcon container to make background transparent
+.c-input-group-text {
+  background-color: transparent !important;
+  border: 0px; // Optional, removes border around icons
+  padding: 0.5rem; // Adjust padding for better alignment
+}
+
+.input-group-overlap .input-group-text {
+  background-color: transparent !important; /* Make the background transparent */
+  border: none; /* Optional: Remove borders if desired */
+  color: #6c757d; /* Adjust icon color to match your design */
+  padding-right: 0; /* Align closer to the input field */
+}
